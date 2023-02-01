@@ -31,13 +31,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="nav flex-column nav-pills p-2 shadow-lg" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="background:rgba(51, 51, 51, 0.8); border-radius: 5px;">
-                                <a class="nav-link active m-1" id="bankingHome-tab" data-toggle="pill" href="#bankingHome" role="tab" aria-controls="bankingHome" aria-selected="true" style="color: white">Account Home</a>
-                                <a class="nav-link m-1" id="bankingWithdraw-tab" data-toggle="pill" href="#bankingWithdraw" role="tab" aria-controls="bankingWithdraw" aria-selected="false" style="color: white">Withdrawals</a>
-                                <a class="nav-link m-1" id="bankingDeposit-tab" data-toggle="pill" href="#bankingDeposit" role="tab" aria-controls="bankingDeposit" aria-selected="false" style="color: white">Deposit</a>
-                                <a class="nav-link m-1" id="bankingTransfer-tab" data-toggle="pill" href="#bankingTransfer" role="tab" aria-controls="bankingTransfer" aria-selected="false" style="color: white">Transfer</a>
-                                <a class="nav-link m-1" id="bankingStatement-tab" data-toggle="pill" href="#bankingStatement" role="tab" aria-controls="bankingStatement" aria-selected="false" style= "color: white">Statement</a>
-                                <a class="nav-link m-1" id="bankingSavings-tab" style="display:none; color: white;" data-toggle="pill" href="#bankingSavings" role="tab" aria-controls="bankingSavings" aria-selected="false">Savings Account</a>
-                                <a class="nav-link m-1" id="bankingActions-tab" data-toggle="pill" href="#bankingActions" role="tab" aria-controls="bankingActions" aria-selected="false" style="color: white">Account Options</a>
+                                <a class="nav-link active m-1" id="bankingHome-tab" data-toggle="pill" href="#bankingHome" role="tab" aria-controls="bankingHome" aria-selected="true">Account Home</a>
+                                <a class="nav-link m-1" id="bankingWithdraw-tab" data-toggle="pill" href="#bankingWithdraw" role="tab" aria-controls="bankingWithdraw" aria-selected="false">Withdrawals</a>
+                                <a class="nav-link m-1" id="bankingDeposit-tab" data-toggle="pill" href="#bankingDeposit" role="tab" aria-controls="bankingDeposit" aria-selected="false">Deposit</a>
+                                <a class="nav-link m-1" id="bankingTransfer-tab" data-toggle="pill" href="#bankingTransfer" role="tab" aria-controls="bankingTransfer" aria-selected="false">Transfer</a>
+                                <!--<a class="nav-link m-1" id="bankingStatement-tab" data-toggle="pill" href="#bankingStatement" role="tab" aria-controls="bankingStatement" aria-selected="false" style= "color: white">Statement</a>!-->
+                                <a class="nav-link m-1" id="bankingSavings-tab" data-toggle="pill" href="#bankingSavings" role="tab" aria-controls="bankingSavings" aria-selected="false">Savings Account</a>
+                                <a class="nav-link m-1" id="bankingActions-tab" data-toggle="pill" href="#bankingActions" role="tab" aria-controls="bankingActions" aria-selected="false">Account Options</a>
                             </div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <button class="btn btn-block" id="logoffbutton" style="background-color: #DC143C; color: white">Logoff</button>
+                            <button class="btn btn-block" id="logoffbutton" style="background-color: #f2a367; color: rgb(0, 0, 0)">Logoff</button>
                         </div>
                     </div>
                 </div>
@@ -71,6 +71,7 @@
                             <div class="row">
                                 <div class="col-12 title">
                                     <h3 style="font-size: 35px;">Welcome, <span id="customerName"></span></h3>
+                                    <h4 style="font-size: 15px;">Welcome to your personal banking screen, from this screen you can make deposits, withdrawal and transfer money to other people, You can also check your recent activity using your statement.</h4>
                                 </div>
                             </div>
                             <div class="row" id="successRow" style="display:none;">
@@ -83,8 +84,8 @@
                                     <div class="card mb-3" style="background:rgba(51, 51, 51, 0.8); color: white;">
                                         <div class="card-header"><i class="fad fa-fw fa-money-bill-wave"></i> Current Bank Balance:</div>
                                         <div class="card-body">
-                                            <h5 class="card-title" style="font-weight: bolder; color: #28a745;" id="currentBalance"></h5>
-                                            <p class="card-text" style="color: white;">Total Amount Available To Withdraw/Transfer</p>
+                                            <h5 class="card-title" style="font-weight: bolder; color: white;" id="currentBalance"></h5>
+                                            <p class="card-text" style="color: white;">This is currently how much is avaliable to spend in your account.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -92,8 +93,8 @@
                                     <div class="card mb-3" style="background:rgba(51, 51, 51, 0.8); color: white;">
                                         <div class="card-header"><i class="fad fa-fw fa-coin"></i> Current Cash Balance:</div>
                                         <div class="card-body">
-                                            <h5 class="card-title" style="font-weight: bolder; color: #28a745;" id="currentCashBalance"></h5>
-                                            <p class="card-text" style="color: white;">Total Amount Available To Deposit</p>
+                                            <h5 class="card-title" style="font-weight: bolder; color: white;" id="currentCashBalance"></h5>
+                                            <p class="card-text" style="color: white;">This is currently how much cash you have on your person.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -106,20 +107,20 @@
                                             <div class="container-fluid">
                                                 <div class="row m-1">
                                                     <div class="col-4"><button class="btn btn-primary btn-block" data-action="deposit" data-amount="100">Deposit $100</button></div>
-                                                    <div class="col-4"><button class="btn btn-primary btn-block" data-action="deposit" data-amount="1000">Deposit $1,000</button></div>
-                                                    <div class="col-4"><button class="btn btn-primary btn-block" data-action="deposit" data-amount="10000">Deposit $10,000</button></div>
+                                                    <div class="col-4"><button class="btn btn-primary btn-block" data-action="deposit" data-amount="1000">Deposit $1000</button></div>
+                                                    <div class="col-4"><button class="btn btn-primary btn-block" data-action="deposit" data-amount="10000">Deposit $10000</button></div>
                                                 </div>
                                                 <div class="row m-1">
                                                     <div class="col-4"><button class="btn btn-secondary btn-block" data-action="withdraw" data-amount="100">Withdraw $100</button></div>
-                                                    <div class="col-4"><button class="btn btn-secondary btn-block" data-action="withdraw" data-amount="1000">Withdraw $1,000</button></div>
-                                                    <div class="col-4"><button class="btn btn-secondary btn-block" data-action="withdraw" data-amount="10000">Withdraw $10,000</button></div>
+                                                    <div class="col-4"><button class="btn btn-secondary btn-block" data-action="withdraw" data-amount="1000">Withdraw $1000</button></div>
+                                                    <div class="col-4"><button class="btn btn-secondary btn-block" data-action="withdraw" data-amount="10000">Withdraw $10000</button></div>
                                                 </div>
                                                 <div class="row m-1">
                                                     <div class="col-6">
-                                                        <button class="btn btn-info btn-block" id="savingsQuicky1" style="display:none;" data-action="savingsdeposit" data-amount="10000">Transfer $10,000 from Bank to Savings</button>
+                                                        <button class="btn btn-info btn-block" id="savingsQuicky1" style="display:none;" data-action="savingsdeposit" data-amount="10000">Transfer $10000 from Bank to Savings</button>
                                                     </div>
                                                     <div class="col-6">
-                                                        <button class="btn btn-info btn-block" id="savingsQuicky2" style="display:none;" data-action="savingswithdraw" data-amount="10000">Transfer $10,000 from Savings to Bank</button>
+                                                        <button class="btn btn-info btn-block" id="savingsQuicky2" style="display:none;" data-action="savingswithdraw" data-amount="10000">Transfer $10000 from Savings to Bank</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -146,8 +147,8 @@
                                     <div class="card mb-3" style="background:rgba(51, 51, 51, 0.8); color: white;">
                                         <div class="card-header"><i class="fad fa-fw fa-money-bill-wave"></i> Current Bank Balance:</div>
                                         <div class="card-body">
-                                            <h5 class="card-title" style="font-weight: bolder; color: #28a745;" id="currentBalance1"></h5>
-                                            <p class="card-text" style="color: white;">Total Amount Available To Withdraw/Transfer</p>
+                                            <h5 class="card-title" style="font-weight: bolder; color: white;" id="currentBalance1"></h5>
+                                            <p class="card-text" style="color: white;">This is currently how much is avaliable to spend in your account.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -155,8 +156,8 @@
                                     <div class="card mb-3" style="background:rgba(51, 51, 51, 0.8); color: white;">
                                         <div class="card-header"><i class="fad fa-fw fa-coin"></i> Current Cash Balance:</div>
                                         <div class="card-body">
-                                            <h5 class="card-title" style="font-weight: bolder; color: #28a745;" id="currentCashBalance1"></h5>
-                                            <p class="card-text" style="color: white;">Total Amount Available To Deposit</p>
+                                            <h5 class="card-title" style="font-weight: bolder; color: white;" id="currentCashBalance1"></h5>
+                                            <p class="card-text" style="color: white;">This is currently how much cash you have on your person.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -205,8 +206,8 @@
                                     <div class="card mb-3" style="background:rgba(51, 51, 51, 0.8); color: white;">
                                         <div class="card-header"><i class="fad fa-fw fa-money-bill-wave"></i> Current Bank Balance:</div>
                                         <div class="card-body">
-                                            <h5 class="card-title" style="font-weight: bolder; color: #28a745;" id="currentBalance2"></h5>
-                                            <p class="card-text" style="color: white;">Total Amount Available To Withdraw/Transfer</p>
+                                            <h5 class="card-title" style="font-weight: bolder; color: white;" id="currentBalance2"></h5>
+                                            <p class="card-text" style="color: white;">This is currently how much is avaliable to spend in your account.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -214,8 +215,8 @@
                                     <div class="card mb-3" style="background:rgba(51, 51, 51, 0.8); color: white;">
                                         <div class="card-header"><i class="fad fa-fw fa-coin"></i> Current Cash Balance:</div>
                                         <div class="card-body">
-                                            <h5 class="card-title" style="font-weight: bolder; color: #28a745;" id="currentCashBalance2"></h5>
-                                            <p class="card-text" style="color: white;">Total Amount Available To Deposit</p>
+                                            <h5 class="card-title" style="font-weight: bolder; color: white;" id="currentCashBalance2"></h5>
+                                            <p class="card-text" style="color: white;">This is currently how much cash you have on your person.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -299,7 +300,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="bankingStatement" role="tabpanel" aria-labelledby="bankingStatement-tab">
+                    <!--<div class="tab-pane fade" id="bankingStatement" role="tabpanel" aria-labelledby="bankingStatement-tab">
                         <div class="container-fluid p-2">
                             <div class="row">
                                 <div class="col-12 title">
@@ -328,7 +329,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>!-->
                     <div class="tab-pane fade" id="bankingSavings" role="tabpanel" aria-labelledby="bankingSavings-tab">
                         <div class="container-fluid p-2" style="position: relative; top: 54px;">
                             <div class="row">

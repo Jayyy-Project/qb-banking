@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 * {
     font-family: 'Poppins', sans-serif;
     font-weight: bolder;
@@ -10,7 +11,7 @@ body {
 }
 
 #bankingContainer {
-    background: #444444 !important;
+    background: #30475c !important;
     border-radius: 7px;
     min-height: 800px;
     max-height: 810px;
@@ -60,7 +61,7 @@ body {
     color: white;
     margin-bottom: 15px;
     font-weight: bolder;
-    border-left: 2px solid red;
+    border-left: 2px solid #264463;
 }
 
 .content {
@@ -71,24 +72,24 @@ body {
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
     color: rgb(255, 255, 255);
-    background-color: #DC143C;
+    background-color: #0077ff;
 }
 
 .btn-primary {
     color: rgb(255, 255, 255);
-    background-color: #DC143C;
+    background-color: #0077ff;
     border-color: transparent;
 }
 
 .btn-primary:hover {
     color: rgb(255, 255, 255);
-    background-color: rgb(90, 98, 104);
-    border-color: rgb(84, 91, 98);
+    background-color: #1c68be;
+    border-color: #6c757d;
 }
 
 .btn-secondary {
     color: rgb(255, 255, 255);
-    background-color: #28a745;
+    background-color: #6c757d;
 }
 
 .small,
@@ -98,5 +99,5 @@ small {
 }
 
 #savingsBalance {
-    color: #28a745;
+    color: white;
 }
